@@ -1,0 +1,145 @@
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        /* Fundo principal bem escuro */
+        color: #e0e0e0;
+        /* Texto cinza claro para não forçar a vista */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        margin: 0;
+    }
+
+    h1 {
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Estilização do Input de Valor */
+    label {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    #real-input {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px;
+        font-size: 1.2rem;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        /* Fundo do input levemente mais claro que o body */
+        color: #ffffff;
+        margin-bottom: 2rem;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #real-input:focus {
+        border-color: #6366f1;
+        /* Azul vibrante ao clicar no campo */
+        box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+    }
+
+    /* Container dos Botões usando CSS Grid */
+    .botoes-moedas {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        /* Grid para alinhar os botões em 2 colunas */
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .botoes-moedas h2 {
+        grid-column: 1 / -1;
+        /* Faz o título ocupar todas as colunas do grid */
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #aaaaaa;
+        font-size: 1.1rem;
+    }
+
+    /* Estilização dos Botões */
+    button {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+        border: 1px solid #444;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        /* Transição suave para o hover */
+    }
+
+    button:hover {
+        background-color: #6366f1;
+        /* Azul vibrante ao passar o mouse */
+        color: #ffffff;
+        border-color: #6366f1;
+        transform: translateY(-2px);
+        /* Efeito de botão subindo levemente */
+    }
+
+    button:active {
+        transform: translateY(0);
+        /* Efeito de botão sendo "pressionado" */
+    }
+
+    /* Área de Resultados e Lista LIFO */
+    .campo-resultado {
+        margin-top: 2.5rem;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .campo-resultado p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 0.5rem;
+    }
+
+    #lista-resultados {
+        list-style-type: none;
+        /* Remove as bolinhas padrão da lista */
+        padding: 0;
+        margin: 0;
+    }
+
+    #lista-resultados li {
+        background-color: #1e1e1e;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #10b981;
+        /* Borda verde à esquerda remetendo a "dinheiro/sucesso" */
+        font-size: 1.1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 0.4s ease-out;
+        /* Animação para a entrada do LIFO */
+    }
+
+    /* Animação para dar destaque quando o item entra no topo (LIFO) */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }

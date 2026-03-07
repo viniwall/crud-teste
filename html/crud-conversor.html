@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas em crud</title>
+    <link rel="stylesheet" href="../assets/css/crud-conversor.css">
+</head>
+
+<body>
+    <h1>Conversor de moedas</h1>
+
+    <label for="real-input">Insira o valor em Real</label>
+    <input type="number" id="real-input">
+
+    <div class="botoes-moedas">
+        <h2>Selecione a moeda para conversão:</h2>
+        <button type="button" id="dolar-americano">Dólar Americano</button>
+        <button type="button" id="euro">Euro</button>
+        <button type="button" id="libra-esterlina">Libra Esterlina</button>
+        <button type="button" id="dolar-canadense">Dólar Canadense</button>
+        <button type="button" id="iene-japones">Iene Japônes</button>
+        <button type="button" id="peso-argentino">Peso Argentino</button>
+        <button type="button" id="franco-suico">Franco Suíço</button>
+        <button type="button" id="yuan-chines">Yuan Chinês</button>
+    </div>
+
+    <div class="campo-resultado">
+        <p>Histórico de Conversões:</p>
+        <ul id="lista-resultados">
+        </ul>
+    </div>
+
+
+    <script src="../assets/js/crud-conversor.js"></script>
+
+</body>
+
+</html>
