@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>cadastro de Imoveis</h1>
+
+    <label for="">Localiade</label>
+    <input id="campo-local" type="text" required>
+
+    <label for="Propriedade">proprietario</label>
+    <input id="campo-Propriedade" type="text" required>
+
+    <label for="valor">Valor</label>
+    <input id="campo-Valor" type="text" required>
+
+    <label for="tamanho">tamanho</label>
+    <input id="campo-Tamanho" type="text" required>
+
+    <label for="construçao">há construçao</label>
+    <select id="campo-Construcao" required>
+        <option value="" disabled selected>selecione</option>
+        <option value="true">sim</option>
+        <option value="false">não</option>
+    </select>
+
+    <button id="botao-salvar">salvar</button>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="proximoId">codigo</th>
+                    <th class="localidade">localidade</th>
+                    <th class="proprietario">proprietario</th>
+                    <th class="valor">valor do imovel</th>
+                    <th class="tamanho">metragem quadrada </th>
+                    <th class="valor-metro">$ metragem</th>
+                    <th class="construcao">há construção</th>
+                </tr>
+            </thead>
+            <tbody id="a-cara">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+<script src="../assets/js/exercicio3-crud.js"></script></body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/exercicio4-crud.css">
+    <title>filmes</title>
+</head>
+<body>
+    <h1>lista de filmes</h1>
+
+    <label for="nome-filme">Nome do filme</label>
+    <input type="text" id="nome-filme">
+
+    <label for="genero">Gênero do filme</label>
+    <input type="text" id="genero">
+
+    <label for="duracao">Duraçâo (em minutos)</label>
+    <input type="number" id="duracao">
+
+    <label for="nota">Nota do filme</label>
+    <input type="number" id="nota">
+
+    <label for="classificacao">Classificação</label>
+    <select id="classificacao">
+        <option value="Livre">Livre</option>
+        <option value="10">10 anos</option>
+        <option value="12">12 anos</option>
+        <option value="14">14 anos</option>
+        <option value="16">16 anos</option>
+        <option value="18">18 anos</option>
+    </select>
+
+    <label for="assistido">Assistido em cinema?</label>
+    <select id="assistido">
+        <option value="" disabled selected>escolher</option>
+        <option value="sim">sim</option>
+        <option value="nao">não</option>
+    </select>
+
+    <button id="salvar">salvar</button>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome do filme</th>
+                    <th>Gênero</th>
+                    <th>Duração</th>
+                    <th>Nota</th>
+                    <th>Classifição</th>
+                    <th>Assistido no Cinema?</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../assets/js/exercicio4-crud.js"></script>
+</body>
+</html>

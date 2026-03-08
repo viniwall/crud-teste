@@ -1,0 +1,118 @@
+/* Variáveis de cores para o Dark Mode */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --input-bg: #2c2c2c;
+    --input-border: #444;
+    --input-focus: #5c88fa;
+    --btn-bg: #3b82f6;
+    --btn-hover: #2563eb;
+    --table-header: #1e1e1e;
+    --table-border: #333;
+    --table-hover: #1f1f1f;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Estilização do Formulário */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao focar no input (clicar) */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--input-focus);
+}
+
+/* Ocultar as setinhas do input number para um visual mais limpo */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Botão de Salvar */
+button#salvar {
+    margin-top: 25px;
+    margin-bottom: 40px; /* Dá um respiro antes da tabela */
+    padding: 12px;
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#salvar:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Container da Tabela (o div que você já tem em volta do table) */
+div {
+    overflow-x: auto; /* Adiciona rolagem horizontal em telas pequenas */
+}
+
+/* Estilização da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-color);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--table-border);
+}
+
+th {
+    background-color: var(--table-header);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: var(--table-hover);
+}
